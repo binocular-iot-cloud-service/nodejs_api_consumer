@@ -1,1 +1,1 @@
-# nodejs_api_consumer
+## This is a node.js consumer of the Binocular IoT Cloud Service API
