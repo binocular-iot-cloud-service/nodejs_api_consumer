@@ -1,0 +1,3 @@
+exports.getDeviceDataEntry = function(entryId) {
+	
+}
