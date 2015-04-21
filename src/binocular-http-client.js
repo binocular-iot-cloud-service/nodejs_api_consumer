@@ -40,7 +40,7 @@ exports.get = function(endpoint, callback) {
 	doRequest('GET', endpoint, callback);
 }
 
-exports.post = function(endpoint, callback, body) {
+exports.post = function(endpoint, body, callback) {
 	doRequest('POST', endpoint, callback, body);
 }
 
@@ -51,14 +51,15 @@ exports.post = function(endpoint, callback, body) {
  */
 var doRequest = function(method, endpoint, callback, body) {
 	options.url = baseUrl+endpoint+apiKeyQueryParam;
+	console.log(options.url);
 	options.method = method;
-	if(body) {
-		options.body = JSON.Parse(body);
-	}
+
 	request(options, function(error, response, body) {
+		console.log(response.statusCode);
 		if(error) {
 			callback(error, body);
 		} else {
+			body = JSON.parse(body);
 			callback(null, body);
 		}
 	})

@@ -20,6 +20,6 @@ module.exports = function() {
 	};
 
 	for(var obj in _interface) {
-		this[obj] = obj;
+		this[obj] = _interface[obj];
 	}
 }
