@@ -5,6 +5,7 @@
 var request = require('request'),
 	config = require('./../config');
 
+
 /*
  *
  *	User credentials & local variables
@@ -28,6 +29,7 @@ var	API_KEY = config.API_KEY,
 	    'sendImmediately': true
   	}
  }
+
 
 /*
  *

@@ -1,4 +1,3 @@
-exports.getDeviceData = function(ids) {
-	//if ids == string --- HTTP GET
-	//if is array --- HTTP POST
+exports.getDeviceData = function() {
+	//http.get(...);
 }
