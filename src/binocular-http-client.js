@@ -12,7 +12,8 @@ var request = require('request'),
  */
 var	API_KEY = config.API_KEY,
 	CLIENT_SECRET = config.CLIENT_SECRET,
-	baseUrl = config.host;
+	baseUrl = config.host,
+	apiKeyQueryParam = "?api_key="+API_KEY;
 
 
 /*
@@ -35,12 +36,12 @@ var	API_KEY = config.API_KEY,
  *
  * Interface
  */
-exports.get = function(endpoint, successcb, errorcb) {
-	doRequest('GET', endpoint, successcb, errorcb);
+exports.get = function(endpoint, callback) {
+	doRequest('GET', endpoint, callback);
 }
 
-exports.post = function(endpoint, successcb, errorcb, body) {
-	doRequest('POST', endpoint, successcb, errorcb, body);
+exports.post = function(endpoint, callback, body) {
+	doRequest('POST', endpoint, callback, body);
 }
 
 
@@ -48,17 +49,17 @@ exports.post = function(endpoint, successcb, errorcb, body) {
  *
  *	Functions
  */
-var doRequest = function(method, endpoint, successcb, errorcb, body) {
-	options.url = baseUrl+endpoint;
+var doRequest = function(method, endpoint, callback, body) {
+	options.url = baseUrl+endpoint+apiKeyQueryParam;
 	options.method = method;
 	if(body) {
 		options.body = JSON.Parse(body);
 	}
 	request(options, function(error, response, body) {
 		if(error) {
-			errorcb(error);
+			callback(error, body);
 		} else {
-			successcb(body);
+			callback(null, body);
 		}
 	})
 }

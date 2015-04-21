@@ -5,7 +5,7 @@ module.exports = function(grunt) {
         separator: '\n\n',
       },
       dist: {
-        src: ['src/binocular-data-services/*'],
+        src: ['src/binocular-data-services/*/*'],
         dest: 'binocular-data-service.js',
       },
     },
