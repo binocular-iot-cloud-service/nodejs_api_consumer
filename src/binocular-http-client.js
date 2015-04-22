@@ -22,7 +22,7 @@ var	API_KEY = config.API_KEY,
  */
  var options = {
  	headers: {
- 		"Content-type": "application/json"
+ 		'Content-Type': 'application/json'
  	},
  	'auth': {
 	    'user': API_KEY,
@@ -41,6 +41,7 @@ exports.get = function(endpoint, callback) {
 }
 
 exports.post = function(endpoint, body, callback) {
+	body = JSON.stringify(body);
 	doRequest('POST', endpoint, callback, body);
 }
 
@@ -53,7 +54,11 @@ var doRequest = function(method, endpoint, callback, body) {
 	options.url = baseUrl+endpoint+apiKeyQueryParam;
 	console.log(options.url);
 	options.method = method;
-
+	
+	if(body) {
+		options.body = body;
+	}
+	console.log(options);
 	request(options, function(error, response, body) {
 		console.log(response.statusCode);
 		if(error) {
