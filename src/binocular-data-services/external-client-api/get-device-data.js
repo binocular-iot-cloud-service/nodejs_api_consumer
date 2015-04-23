@@ -1,7 +1,3 @@
-/*
- *	POST WITH ARRAY DOES NOT WORK YET; WIERD!
- */
-
 exports.getDeviceData = function(deviceTypeIds, callback) {
 	if(Array.isArray(deviceTypeIds)) {
 		var endpoint = ['/devices', 'data'].join('/');
