@@ -2,7 +2,7 @@ var binocularDataService = require('./../index.js'),
 	bds = new binocularDataService();
 
 
-var deviceTypeId = "55286276e0cec07753a55c8a";
+var deviceTypeId = "";
 
 bds.activateDevice(deviceTypeId, function(err, device) {
 	if(err) {

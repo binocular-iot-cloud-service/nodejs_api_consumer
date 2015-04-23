@@ -2,12 +2,12 @@ var binocularDataService = require('./../index.js'),
 	bds = new binocularDataService();
 
 
-var deviceId = "55286276e0cec07753a55c8a",
+var deviceId = "",
 	data = {
-		"some":"data";
+		"some":"field"
 	};
 
-bds.sendData(deviceId, function(err, device) {
+bds.sendData(deviceId, data, function(err, device) {
 	if(err) {
 		console.log(err);
 	} else {
