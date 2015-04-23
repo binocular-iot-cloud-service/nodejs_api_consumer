@@ -41,7 +41,12 @@ exports.get = function(endpoint, callback) {
 }
 
 exports.post = function(endpoint, body, callback) {
-	body = JSON.stringify(body);
+	try {
+		body = JSON.stringify(body);
+	} catch(e) {
+		console.log("invalid body");
+	}
+	
 	doRequest('POST', endpoint, callback, body);
 }
 
@@ -52,20 +57,25 @@ exports.post = function(endpoint, body, callback) {
  */
 var doRequest = function(method, endpoint, callback, body) {
 	options.url = baseUrl+endpoint+apiKeyQueryParam;
-	console.log(options.url);
 	options.method = method;
-	
+
 	if(body) {
 		options.body = body;
 	}
-	console.log(options);
 	request(options, function(error, response, body) {
-		console.log(response.statusCode);
 		if(error) {
-			callback(error, body);
+			try {
+				callback(error, body);
+			} catch (e) {
+				console.log("Provide a valid callback");
+			}
 		} else {
 			body = JSON.parse(body);
-			callback(null, body);
+			try {
+				callback(null, body);
+			} catch (e) {
+				console.log("Provide a valid callback");
+			}
 		}
 	})
 }
