@@ -1,0 +1,6 @@
+doc
+node_modules
+config.json
+.DS_Store
+src/.DS_Store
+src/binocular-data-services/.DS_Store
