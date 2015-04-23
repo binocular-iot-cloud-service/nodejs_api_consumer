@@ -1,13 +1,13 @@
 {
-  "name": "nodejs_binocular_consumer",
-  "version": "0.0.2",
-  "description": "",
+  "name": "binocular-api",
+  "version": "1.0.3",
+  "description": "A wrapper for the Binocular IoT Cloud Service REST api.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Sebastian Jonasson",
+  "license": "MIT",
   "dependencies": {
     "request": "^2.55.0"
   },
