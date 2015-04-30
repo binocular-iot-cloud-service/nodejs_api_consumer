@@ -1,5 +1,5 @@
 var binocularDataService = require('./../index.js'),
-	bds = new binocularDataService();
+	bds = new binocularDataService("API_KEY", "CLIENT_SECRET");
 
 
 bds.getDeviceTypes(function(err, devicetypes) {
