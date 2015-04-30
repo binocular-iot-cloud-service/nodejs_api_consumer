@@ -5,3 +5,4 @@ config.json
 .DS_Store
 src/.DS_Store
 src/binocular-data-services/.DS_Store
+test.js

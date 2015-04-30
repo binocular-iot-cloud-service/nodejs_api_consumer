@@ -1,13 +1,10 @@
 module.exports = function(api_key, client_secret) {
-	var self = this;
+	var self = this,
+		BinocularHttpClient = require('./src/binocular-http-client'),
+		BinocularDataService = require('./binocular-data-service');
 
-	var http = require('./src/binocular-http-client');
-	var http = new http(api_key, client_secret);
-		//dataService = require('./binocular-data-service');
-
-	var ds = require('./binocular-data-service');
-	var _interface = new ds(http);
-	console.log(_interface);
+	var http = new BinocularHttpClient(api_key, client_secret);
+	var _interface = new BinocularDataService(http);
 
 	for(var obj in _interface) {
 		self[obj] = _interface[obj];
