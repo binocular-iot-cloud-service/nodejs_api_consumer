@@ -1,1 +1,1 @@
-var http = require('./src/binocular-http-client');
+module.exports = function(http) {

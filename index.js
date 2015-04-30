@@ -1,36 +1,15 @@
-module.exports = function() {
+module.exports = function(api_key, client_secret) {
 	var self = this;
-	var setInterface = function() {
-		var _interface = require('./binocular-data-service');
 
-		for(var obj in _interface) {
-			self[obj] = _interface[obj];
-		}
+	var http = require('./src/binocular-http-client');
+	var http = new http(api_key, client_secret);
+		//dataService = require('./binocular-data-service');
+
+	var ds = require('./binocular-data-service');
+	var _interface = new ds(http);
+	console.log(_interface);
+
+	for(var obj in _interface) {
+		self[obj] = _interface[obj];
 	}
-	try {
-		setInterface();
-	} catch(e) {
-		console.log("You need to set your api credentials");
-	}
-
-	this.setCredentials = function(api_key, client_secret) {
-		var config = {
-			API_KEY: api_key,
-			CLIENT_SECRET: client_secret,
-			host: "https://api.binocular.se/v1"
-		};
-
-		var content = JSON.stringify(config);
-
-		var fs = require('fs');
-		fs.writeFile(__dirname+"/config.json", content, function(err) {
-		    if(err) {
-		        return console.log(err);
-		    } else {
-		    	setInterface();
-		    }
-		}); 
-
-	};
-	
 }
