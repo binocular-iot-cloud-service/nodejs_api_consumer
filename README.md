@@ -2,13 +2,13 @@
 
 ###Get started
 
-1. Install binocular-api module
+######1. Install binocular-api module
 	
 ```
 $ npm install binocular-api --save
 ```
 
-2. Require module and instaciate with credentials
+######2. Require module and instaciate with credentials
 	
 ```javascript
 var BinocularApi = require('binocular-api'); 
@@ -19,7 +19,7 @@ var apikey = "YOUR API KEY",
 var binocular = new BinocularApi(apikey, clientsecret);
 ```
 
-3. Make api request
+######3. Make api request
 
 ```javascript
 binocular.getDevices(function(err, devices) { 
@@ -31,7 +31,7 @@ binocular.getDevices(function(err, devices) {
 });
 ```
 
-Example
+######Example
 
 ```javascript
 var BinocularApi = require('binocular-api'); 
