@@ -1,6 +1,6 @@
 {
   "name": "binocular-api",
-  "version": "1.0.7",
+  "version": "1.0.9",
   "description": "A wrapper for the Binocular IoT Cloud Service REST api.",
   "main": "index.js",
   "scripts": {

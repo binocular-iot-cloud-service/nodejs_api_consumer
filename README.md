@@ -1,14 +1,14 @@
 ## Binocular API Wrapper
 
-###Get started
+### Get started
 
-######1. Install binocular-api module
+###### 1. Install binocular-api module
 	
 ```
 $ npm install binocular-api --save
 ```
 
-######2. Require module and instaciate with credentials
+###### 2. Require module and instaciate with credentials
 	
 ```javascript
 var BinocularApi = require('binocular-api'); 
@@ -19,7 +19,7 @@ var apikey = "YOUR API KEY",
 var binocular = new BinocularApi(apikey, clientsecret);
 ```
 
-######3. Make api request
+###### 3. Make api request
 
 ```javascript
 binocular.getDevices(function(err, devices) { 
@@ -31,7 +31,7 @@ binocular.getDevices(function(err, devices) {
 });
 ```
 
-######Example
+###### Example
 
 ```javascript
 var BinocularApi = require('binocular-api'); 
@@ -51,13 +51,13 @@ binocular.getDevices(function(err, devices) {
 ```
 
 
-###API Documentation
-#####Set up module
-Install module
+### API Documentation
+##### Set up module
+###### Install module
 ```
 $ npm install binocular-api --save
 ```
-Instanciate module with credentials
+###### Instanciate module with credentials
 
 ```javascript
 var BinocularApi = require('binocular-api'); 
@@ -68,8 +68,8 @@ var apikey = "YOUR API KEY",
 var binocular = new BinocularApi(apikey, clientsecret); 
 ```
 
-#####API
-Activate Device
+##### API
+###### Activate Device
 ```javascript
 activateDevice(deviceTypeId, callback)
 
@@ -81,7 +81,7 @@ binocular.activateDevice("deviceTypeId", function(err, activatedDevice) {
     }
 });
 ```
-Get device flags
+###### Get device flags
 
 ```javascript
 getFlags(deviceId, callback)
@@ -94,7 +94,7 @@ binocular.getFlags("deviceId", function(err, flags) {
     }
 });
 ```
-Set device flags
+###### Set device flags
 
 ```javascript
 setFlags(deviceId, flags, callback)
@@ -108,7 +108,7 @@ binocular.setFlags("deviceId", flags, function(err, updatedFlags) {
 });
 ```
 
-Send heartbeat
+###### Send heartbeat
 ```javascript
 sendHeartbeat(deviceId, callback)
 
@@ -120,7 +120,7 @@ binocular.sendHeartbeat("deviceId", function(err, device) {
     }
 });
 ```
-Send data
+###### Send data
 
 ```javascript
 sendData(deviceId, data, callback)
@@ -133,7 +133,7 @@ binocular.sendHeartbeat("deviceId", data, function(err, dataEntry) {
     }
 });
 ```
-Get device
+###### Get device
 
 ```javascript
 
@@ -148,7 +148,7 @@ binocular.getDevice("deviceId", function(err, device) {
 });
 ```
 
-Get devices by device type
+###### Get devices by device type
 
 ```javascript
 getDevicesByDevicetype(devicetypeId, callback)
@@ -161,7 +161,7 @@ binocular.getDevice("devicetypeId", function(err, devices) {
     }
 });
 ```
-Get multiple devices
+###### Get multiple devices
 
 ```javascript
 getDevices(callback)
@@ -175,7 +175,7 @@ binocular.getDevice(function(err, devices) {
 });
 ```
 
-Get device types
+###### Get device types
 
 ```javascript
 getDeviceTypes(callback)
@@ -188,7 +188,7 @@ binocular.getDeviceTypes(function(err, devicetypes) {
     }
 });
 ```
-Get device data entry
+###### Get device data entry
 
 getDeviceDataEntry(entryId, callback)
 
@@ -200,7 +200,7 @@ binocular.getDeviceTypes("entryId", function(err, entry) {
     }
 });
 ```
-Get devices' data
+###### Get devices' data
 
 ```javascript
 getDeviceData( deviceId | [deviceIds], callback)
