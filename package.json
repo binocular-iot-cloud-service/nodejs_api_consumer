@@ -1,10 +1,14 @@
 {
   "name": "binocular-api",
-  "version": "1.0.5",
+  "version": "1.0.7",
   "description": "A wrapper for the Binocular IoT Cloud Service REST api.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": { 
+    "type" : "git",
+    "url" : "https://github.com/binocular-iot-cloud-service/nodejs_api_consumer"
   },
   "author": "Sebastian Jonasson",
   "license": "MIT",
@@ -16,3 +20,5 @@
     "grunt-contrib-concat": "^0.5.1"
   }
 }
+
+
