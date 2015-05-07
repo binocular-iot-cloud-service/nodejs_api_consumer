@@ -48,4 +48,4 @@ binocular.getDevices(function(err, devices) {
          console.log(devices); 
     }
 });
-	```
+```
