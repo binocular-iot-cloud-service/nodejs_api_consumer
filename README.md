@@ -190,6 +190,7 @@ binocular.getDeviceTypes(function(err, devicetypes) {
 ```
 ###### Get device data entry
 
+```javascript
 getDeviceDataEntry(entryId, callback)
 
 binocular.getDeviceTypes("entryId", function(err, entry) { 
