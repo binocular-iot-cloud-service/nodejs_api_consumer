@@ -125,7 +125,7 @@ binocular.sendHeartbeat("deviceId", function(err, device) {
 ```javascript
 sendData(deviceId, data, callback)
 
-binocular.sendHeartbeat("deviceId", data, function(err, dataEntry) { 
+binocular.sendData("deviceId", data, function(err, dataEntry) { 
     if(err) {
          console.log(err); 
     } else {
@@ -200,7 +200,7 @@ binocular.getDeviceTypes("entryId", function(err, entry) {
     }
 });
 ```
-###### Get devices' data
+###### Get devices data
 
 ```javascript
 getDeviceData( deviceId | [deviceIds], callback)
