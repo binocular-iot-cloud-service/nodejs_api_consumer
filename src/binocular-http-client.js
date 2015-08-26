@@ -12,8 +12,7 @@ module.exports = function(API_KEY, CLIENT_SECRET) {
 	 */
 	var	API_KEY = API_KEY,
 		CLIENT_SECRET = CLIENT_SECRET,
-		baseUrl = "https://api.binocular.se/v1",
-		apiKeyQueryParam = "?api_key="+API_KEY;
+		baseUrl = "https://api.binocular.se/v1"
 
 
 	/*
@@ -56,7 +55,7 @@ module.exports = function(API_KEY, CLIENT_SECRET) {
 	 *	Functions
 	 */
 	var doRequest = function(method, endpoint, callback, body) {
-		options.url = baseUrl+endpoint+apiKeyQueryParam;
+		options.url = baseUrl+endpoint
 		options.method = method;
 
 		if(body) {
