@@ -204,9 +204,22 @@ binocular.getDeviceTypes("entryId", function(err, entry) {
 ###### Get devices data
 
 ```javascript
-getDeviceData( deviceId | [deviceIds], callback)
+getDeviceData( deviceId | [deviceIds] [,options],  callback)
 
 binocular.getDeviceData("deviceId", function(err, entries) { 
+    if(err) {
+         console.log(err); 
+    } else {
+         console.log(entries); 
+    }
+});
+
+var options={
+    limit:10,
+    timestamp:1431086691805,
+    next:'dataEntryId'
+}
+binocular.getDeviceData("deviceId", options, function(err, entries) { 
     if(err) {
          console.log(err); 
     } else {
