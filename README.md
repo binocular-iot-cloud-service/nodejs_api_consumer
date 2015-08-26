@@ -213,21 +213,29 @@ binocular.getDeviceData("deviceId", function(err, entries) {
          console.log(entries); 
     }
 });
+```
+Or use an array of device ids.
 
-var options={
-    limit:10,
-    timestamp:1431086691805,
-    next:'dataEntryId'
-}
-binocular.getDeviceData("deviceId", options, function(err, entries) { 
+```javascript
+binocular.getDeviceData(["deviceId1", "deviceId2"], function(err, entries) { 
     if(err) {
          console.log(err); 
     } else {
          console.log(entries); 
     }
 });
+```
 
-binocular.getDeviceData(["deviceId1", "deviceId2"], function(err, entries) { 
+Options for filtering the result is also available
+
+```javascript
+var options={
+    limit:10,
+    timestamp:1431086691805,
+    next:'dataEntryId'
+}
+
+binocular.getDeviceData("deviceId", options, function(err, entries) { 
     if(err) {
          console.log(err); 
     } else {
