@@ -44,7 +44,7 @@ module.exports = function(API_KEY, CLIENT_SECRET) {
 		try {
 			body = JSON.stringify(body);
 		} catch(e) {
-			console.log("invalid body");
+			console.log("Error: Invalid post body");
 		}
 		
 		doRequest('POST', endpoint, callback, body);
@@ -67,14 +67,14 @@ module.exports = function(API_KEY, CLIENT_SECRET) {
 				try {
 					callback(error, body);
 				} catch (e) {
-					console.log("Provide a valid callback");
+					console.log("Error: Provide a valid callback");
 				}
 			} else {
 				body = JSON.parse(body);
 				try {
 					callback(null, body);
 				} catch (e) {
-					console.log("Provide a valid callback");
+					console.log("Error: Provide a valid callback");
 				}
 			}
 		})
