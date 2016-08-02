@@ -1,5 +1,5 @@
 [//]: # (title: Get started with node.js) 
-[//]: # (description: Get started with node.js)
+[//]: # (description: Quick guide to get started using the Binocular API through the nodejs SDK)
 [//]: # (env: nodejs) 
 ### Get started
 
