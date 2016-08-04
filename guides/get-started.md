@@ -1,6 +1,6 @@
-[//]: # (title: Get started with node.js) 
+[//]: # (title: Get started with node.js)
 [//]: # (description: Quick guide to get started using the Binocular API through the nodejs SDK)
-[//]: # (env: nodejs) 
+[//]: # (env: nodejs)
 ### Get started
 
 ###### 1. Install binocular-api module
